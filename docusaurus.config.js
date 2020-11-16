@@ -33,15 +33,19 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learn',
           items: [
+            {
+              label: 'Introduction',
+              to: 'docs/',
+            },
             {
               label: 'User Guide',
               to: 'docs/',
             },
             {
-              label: 'Contribute',
-              to: 'docs/contribute/',
+              label: 'Developer Guide',
+              to: 'docs/',
             },
           ],
         },
@@ -49,12 +53,16 @@ module.exports = {
           title: 'Community',
           items: [
             {
+              label: 'Contribute',
+              to: 'docs/',
+            },
+            {
               label: 'Discord',
               href: 'https://discord.gg/8J4HqyXwa6',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/code4myself',
+              label: 'Github',
+              href: 'https://github.com/ichnion/website',
             },
           ],
         },
@@ -66,8 +74,25 @@ module.exports = {
               to: 'blog',
             },
             {
-              label: 'Github',
-              href: 'https://github.com/ichnion/website',
+              label: 'Support us',
+              to: 'support',
+            },
+            {
+              label: 'Get in touch',
+              to: 'contact',
+            },
+          ],
+        },
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'Privacy',
+              to: 'legal/privacy',
+            },
+            {
+              label: 'Terms',
+              to: 'legal/terms',
             },
           ],
         },
@@ -75,6 +100,8 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Code for Myself. Built with Docusaurus.`,
     },
   },
+  customFields: {},
+  plugins: [],
   presets: [
     [
       '@docusaurus/preset-classic',
