@@ -61,7 +61,7 @@ function Home() {
       <header className={clsx('hero hero--secondary', styles.heroBanner)}>
         <div className="container">
           <img src="img/textlogo.png" title="{siteConfig.title}" />
-          <pre className={styles.definition}>"ιχνιον" (ichnion) – a track, trace or footstep</pre>
+          <code className={styles.definition}>"ιχνιον" (ichnion) – a track, trace or footstep</code>
           <h1 className={styles.headline}>{siteConfig.tagline}</h1>
           <p className={styles.summary}>Through our daily activities and communications a vast digital footprint, our personal activity record data is being generated.<br/>Have you ever looked at your digital footprint (personal information) in a specific way?</p>
           <div className={styles.buttons}>

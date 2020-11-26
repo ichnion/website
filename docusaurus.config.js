@@ -108,6 +108,7 @@ module.exports = {
         },
         theme: {
           hideableSidebar: true,
+          image: 'img/textlogo.png',
           customCss: require.resolve('./src/css/custom.css'),
         },
       },
