@@ -77,7 +77,7 @@ function Home() {
         </div>
       </header>
       <main>
-        <section className="hero">
+        <section className={styles.content}>
           <div className="container">
             <div className="row">
               <h2>Sovereignty over our Digital Heritage</h2>

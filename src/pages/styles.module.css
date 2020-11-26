@@ -51,3 +51,7 @@
   height: 200px;
   width: 200px;
 }
+
+.content {
+  padding: 3rem 1rem;
+}
