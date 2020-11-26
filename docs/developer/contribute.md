@@ -1,5 +1,5 @@
 ---
-title: Contributing to the Ichnion Project
+title: Contributing to Ichnion
 sidebar_label: Contributing
 ---
 
