@@ -8,32 +8,29 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: 'Local First',
+    imageUrl: 'img/undraw_current_location_rypt.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        We don't want to have to upload our personal data to a 3rd party service to be analyzed. Ichnion ensures your data stays with you.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: 'Personal Data',
+    imageUrl: 'img/undraw_my_files_swob.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Ichnion aims to make it easy for everyone to obtain, inspect, analyze and control their personal data.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: 'Digital Privacy',
+    imageUrl: 'img/undraw_privacy_protection_nlwy.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        With Ichnion everyone can gain insight in the data that is stored about us, fostering transparency in a digital society.
       </>
     ),
   },
@@ -61,14 +58,16 @@ function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <header className={clsx('hero hero--secondary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <img src="img/textlogo.png" title="{siteConfig.title}" />
+          <pre className={styles.definition}>"ιχνιον" (ichnion) – a track, trace or footstep</pre>
+          <h1 className={styles.headline}>{siteConfig.tagline}</h1>
+          <p className={styles.summary}>Through our daily activities and communications a vast digital footprint, our personal activity record data is being generated.<br/>Have you ever looked at your digital footprint (personal information) in a specific way?</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--outline button--secondary button--lg',
+                'button button--outline button--primary button--lg',
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/')}>
@@ -78,6 +77,17 @@ function Home() {
         </div>
       </header>
       <main>
+        <section className="">
+          <div className="container">
+            <div className="row">
+              <h2>Sovereignty over our Digital Heritage</h2>
+              <p>Through our daily activities and communications a vast amount of personal activity data is collected, analyzed and exploited ... surprisingly too often not for the benefit of us.</p>
+              <p>However, the digital footprint of each individual is not only a visual depiction of memories but can be used for many things. It can be put to good use, such as health and asset management, career and personal development. In addition, if shared and accumulated across society based on the individual's free will, it will be useful in preventing the spread of pandemics, improving mobility services, road safety, and supporting responses to disasters for example.</p>
+              <p>Personal data exports from web services are not readable for ordinary people. This project wants to change this and help individuals obtain the digital footprints from various service providers as comprehensively as possible based on data portability, to organize, integrate, visualize and put our data into an accessible format.</p>
+            </div>
+          </div>
+        </section>
+
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
@@ -89,6 +99,25 @@ function Home() {
             </div>
           </section>
         )}
+
+        <section className={clsx('hero hero--secondary', styles.heroBanner)}>
+          <div className="container">
+            <h1 className={styles.headline}>Mission - our values</h1>
+            <p className={styles.summary}><i>Code for Myself</i> aims to develop and provide Open Source software to help individuals obtain and manage their personal data archives.<br/>Our goal is to make digital footprints accessible to everyone to be used wisely for ourselves, our families, our communities and society.</p>
+            <p>We are looking for people from all over the world to join and collaborate on this project.</p>
+            <div className={styles.buttons}>
+              <Link
+                className={clsx(
+                  'button button--outline button--primary button--lg',
+                  styles.getStarted,
+                )}
+                to={useBaseUrl('docs/contribute')}>
+                Join the project
+              </Link>
+            </div>
+          </div>
+        </section>
+
       </main>
     </Layout>
   );
