@@ -8,6 +8,18 @@ module.exports = {
   organizationName: 'ichnion', // Usually your Github org/user name.
   projectName: 'website', // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: 'YOUR_API_KEY',
+      indexName: 'YOUR_INDEX_NAME',
+      contextualSearch: true,
+    },
+    announcementBar: {
+      id: 'announce_this',
+      content: 'Preview of the new project website!',
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: true,
+    },
     navbar: {
       title: 'Ichnion Project',
       style: 'dark',
