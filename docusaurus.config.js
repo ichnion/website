@@ -16,17 +16,11 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: 'docs/introduction', label: 'About', position: 'right'},
+        {to: 'docs/about', label: 'About', position: 'right'},
         {
           to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'right',
-        },
-        {
-          to: 'blog/',
-          activeBasePath: 'blog',
-          label: 'News',
           position: 'right',
         },
         {to: 'contact', label: 'Contact', position: 'right'},
@@ -40,11 +34,11 @@ module.exports = {
           items: [
             {
               label: 'Introduction',
-              to: 'docs/introduction',
+              to: 'docs/about',
             },
             {
               label: 'User Guide',
-              to: 'docs/',
+              to: 'docs/user',
             },
             {
               label: 'Developer Guide',
@@ -56,8 +50,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Contribute',
-              to: 'docs/contribute',
+              label: 'Join us',
+              to: 'docs/join',
             },
             {
               label: 'Discord',
@@ -65,7 +59,7 @@ module.exports = {
             },
             {
               label: 'Github',
-              href: 'https://github.com/ichnion/website',
+              href: 'https://github.com/ichnion',
             },
           ],
         },
@@ -73,11 +67,7 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'News',
-              to: 'blog',
-            },
-            {
-              label: 'Support us',
+              label: 'Supporter',
               to: 'support',
             },
             {
@@ -110,15 +100,14 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          path: 'docs',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/ichnion/website/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          blogSidebarTitle: 'Recent news',
-          editUrl: 'https://github.com/ichnion/website/edit/main/',
-        },
         theme: {
+          hideableSidebar: true,
           customCss: require.resolve('./src/css/custom.css'),
         },
       },

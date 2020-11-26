@@ -77,7 +77,7 @@ function Home() {
         </div>
       </header>
       <main>
-        <section className="">
+        <section className="hero">
           <div className="container">
             <div className="row">
               <h2>Sovereignty over our Digital Heritage</h2>
@@ -102,7 +102,7 @@ function Home() {
 
         <section className={clsx('hero hero--secondary', styles.heroBanner)}>
           <div className="container">
-            <h1 className={styles.headline}>Mission - our values</h1>
+            <h1 className={styles.headline}>Mission</h1>
             <p className={styles.summary}><i>Code for Myself</i> aims to develop and provide Open Source software to help individuals obtain and manage their personal data archives.<br/>Our goal is to make digital footprints accessible to everyone to be used wisely for ourselves, our families, our communities and society.</p>
             <p>We are looking for people from all over the world to join and collaborate on this project.</p>
             <div className={styles.buttons}>
@@ -111,7 +111,7 @@ function Home() {
                   'button button--outline button--primary button--lg',
                   styles.getStarted,
                 )}
-                to={useBaseUrl('docs/contribute')}>
+                to={useBaseUrl('docs/join')}>
                 Join the project
               </Link>
             </div>
