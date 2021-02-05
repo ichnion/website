@@ -8,11 +8,11 @@ module.exports = {
   organizationName: 'ichnion', // Usually your Github org/user name.
   projectName: 'website', // Usually your repo name.
   themeConfig: {
-    algolia: {
-      apiKey: 'YOUR_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
-      contextualSearch: true,
-    },
+    // algolia: {
+    //   apiKey: 'YOUR_API_KEY',
+    //   indexName: 'YOUR_INDEX_NAME',
+    //   contextualSearch: true,
+    // },
     announcementBar: {
       id: 'announce_this',
       content: 'Preview of the new project website!',
