@@ -12,17 +12,17 @@ We are looking for people from all over the world to join and collaborate on thi
   <div class="row margin-vert--lg padding-vert--lg">
     <div class="col col--4">
       <a href="https://www.code4japan.org/">
-        <img src="supporters/code4japan.png" alt="Code for Japan" class="item shadow--md" />
+        <img src="supporters/code4japan.png" alt="Code for Japan" class="padding--lg" />
       </a>
     </div>
     <div class="col col--4">
       <a href="https://shiba.iis.u-tokyo.ac.jp/">
-        <img src="supporters/iis-utokyo.png" alt="IIS - Tokyo University" class="item shadow--md" />
+        <img src="supporters/iis-utokyo.png" alt="IIS - Tokyo University" class="padding--lg" />
       </a>
     </div>
     <div class="col col--4">
       <a href="https://georepublic.info/">
-        <img src="supporters/georepublic.png" alt="Georepublic" class="item shadow--md" />
+        <img src="supporters/georepublic.png" alt="Georepublic" class="padding--lg" />
       </a>
     </div>
   </div>
