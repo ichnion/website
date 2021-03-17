@@ -11,3 +11,9 @@ You select various sorts of data, then ask for it to be delivered in `.zip` file
 - Explore the files on your computer.
 
 From this point you can use the Ichnion Excavator to extract personal information from your data archive.
+
+## Supported datasets
+
+The following datasets of Google Takeout are currently supported by Ichnion:
+
+[TBD] List of or link to supported datasets
