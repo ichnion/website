@@ -15,6 +15,7 @@ From this point you can use the Ichnion Excavator to extract personal informatio
 ## Supported datasets
 
 The following datasets of Google Takeout are currently supported by Ichnion:
+
 | Service       |               |
 | ------------- | :-----------: |
 | Android Device Configuration Service | ? |
