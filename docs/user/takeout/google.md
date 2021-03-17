@@ -15,10 +15,8 @@ From this point you can use the Ichnion Excavator to extract personal informatio
 ## Supported datasets
 
 The following datasets of Google Takeout are currently supported by Ichnion:
-
-[TBD] List of or link to supported datasets
-
-
+| Service       |               |
+| ------------- | :-----------: |
 | Android Device Configuration Service | ? |
 | Arts & Culture | ? |
 | Assistant Notes and Lists | ? |
@@ -53,11 +51,11 @@ The following datasets of Google Takeout are currently supported by Ichnion:
 | Hangouts on Air | ? |
 | Home App | ? |
 | Keep | ? |
-| Location History | ? |
+| Location History | yes |
 | Mail | ? |
 | Maps | ? |
 | Maps (your places) | ? |
-| My Activity | ? |
+| My Activity | yes |
 | My Maps | ? |
 | News | ? |
 | Pinpoint | ? |
