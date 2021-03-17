@@ -17,3 +17,58 @@ From this point you can use the Ichnion Excavator to extract personal informatio
 The following datasets of Google Takeout are currently supported by Ichnion:
 
 [TBD] List of or link to supported datasets
+
+
+| Android Device Configuration Service | ? |
+| Arts & Culture | ? |
+| Assistant Notes and Lists | ? |
+| Blogger | ? |
+| Calendar | ? |
+| Chrome | ? |
+| Cloud Print | ? |
+| Contacts | ? |
+| Crisis User Reports | ? |
+| Currents Circles | ? |
+| Currents Communities | ? |
+| Currents Stream | ? |
+| Data Shared for Research | ? |
+| Drive | ? |
+| Fit | ? |
+| Google Account | ? |
+| Google Cloud Search | ? |
+| Google Help Communities | ? |
+| Google My Business | ? |
+| Google Pay | ? |
+| Google Photos | ? |
+| Google Play Console | ? |
+| Google Play Games Services | ? |
+| Google Play Movies & TV | ? |
+| Google Play Store | ? |
+| Google Shopping | ? |
+| Google Store | ? |
+| Google Translator Toolkit | ? |
+| Google Workspace Marketplace | ? |
+| Groups | ? |
+| Hangouts | ? |
+| Hangouts on Air | ? |
+| Home App | ? |
+| Keep | ? |
+| Location History | ? |
+| Mail | ? |
+| Maps | ? |
+| Maps (your places) | ? |
+| My Activity | ? |
+| My Maps | ? |
+| News | ? |
+| Pinpoint | ? |
+| Posts on Google | ? |
+| Profile | ? |
+| Purchases & Reservations | ? |
+| Question Hub | ? |
+| Reminders | ? |
+| Saved | ? |
+| Search contributions | ? |
+| Street View | ? |
+| Tasks | ? |
+| Voice | ? |
+| YouTube and YouTube Music | ? |
