@@ -46,8 +46,8 @@ Supported files are below.
   - `primary_public_location.json`
 
 ### Basic usage
-Below is the basic example to use excavator. Which will extract the data from the file.
+Below is the basic example to use excavator. Which will recusively find the applicable file from *directory* and extract the data.
 
-`$ excavator read SavedPlace.json`
+`$ excavator read SavedPlace`
 
 Then it will store the data into database.
