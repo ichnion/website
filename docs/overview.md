@@ -50,3 +50,4 @@ Below is the basic example to use excavator. Which will extract the data from th
 
 `$ excavator read SavedPlace.json`
 
+Then it will store the data into database.
