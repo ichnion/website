@@ -15,13 +15,13 @@ If you already have got `rustc` installed in your local, you also have `cargo` i
 And then you can install with this command.
 
 ```sh
-$ cargo install --git https://github.com/ichnion/excavator --branch develop
+$ cargo install --git https://github.com/ichnion/excavator --branch rusqlite
 ```
 
 ### Install from crates.io
 TBD
 
-### Install from Homebre
+### Install from Homebrew
 TBD
 
 ## How to use Excavator
