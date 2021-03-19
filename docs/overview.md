@@ -48,6 +48,10 @@ Supported files are below.
 ### Basic usage
 Below is the basic example to use excavator. Which will recusively find the applicable file from *directory* and extract the data.
 
-`$ excavator read SavedPlace`
+`$ excavator read TakeOut`
+
+Or you can specify the single file
+
+`$ excavator read Location History.json`
 
 Then it will store the data into database.
