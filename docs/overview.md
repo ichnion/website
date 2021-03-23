@@ -15,7 +15,7 @@ If you already have got `rustc` installed in your local, you also have `cargo` i
 And then you can install with this command.
 
 ```sh
-$ cargo install --git https://github.com/ichnion/excavator --branch rusqlite
+$ cargo install --git https://github.com/ichnion/excavator --branch develop
 ```
 
 ### Install from crates.io
