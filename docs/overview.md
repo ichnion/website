@@ -19,7 +19,11 @@ $ cargo install --git https://github.com/ichnion/excavator --branch rusqlite
 ```
 
 ### Install from crates.io
-TBD
+You can also install from package registry.
+
+```sh
+$ cargo install excavator
+```
 
 ### Install from Homebrew
 TBD
