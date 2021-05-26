@@ -22,3 +22,10 @@ The following datasets of Google Takeout are currently supported by Ichnion:
 | Device Location | yes |
 | Primary Location | yes |
 | Primary Public Location | yes |
+| Last location | ? |
+
+:::tip
+
+After downloading location data from Facebook, you may have empty files. If yes, you should check in your device's settings if Facebook is allowed to use your location. [To turn it on](https://www.facebook.com/help/275925085769221).
+
+:::
