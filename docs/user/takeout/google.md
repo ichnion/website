@@ -32,7 +32,7 @@ The following datasets of Google Takeout are currently supported by Ichnion:
 | Currents Stream | ? |
 | Data Shared for Research | ? |
 | Drive | ? |
-| Fit | ? |
+| Fit | yes |
 | Google Account | ? |
 | Google Cloud Search | ? |
 | Google Help Communities | ? |
@@ -71,3 +71,9 @@ The following datasets of Google Takeout are currently supported by Ichnion:
 | Tasks | ? |
 | Voice | ? |
 | YouTube and YouTube Music | ? |
+
+:::tip
+
+After downloading data from Google Takeout, you may have empty files. If yes, you should check in your Google account's settings if Google is allowed to collect your data. To check it : Click on your Google account > Manage your Google account > Data & personalization > turn on activity controls. 
+
+:::
