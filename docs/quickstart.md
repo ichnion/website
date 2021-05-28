@@ -52,6 +52,8 @@ Supported files are below.
   - `device_location.json`
   - `primary_location.json`
   - `primary_public_location.json`
+  - `last_location.json`
+  - `location_history.json`
 
 ### Basic usage
 Below is the basic example to use excavator. Which will recusively find the applicable file from *directory* and extract the data.
