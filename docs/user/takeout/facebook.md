@@ -22,7 +22,8 @@ The following datasets of Google Takeout are currently supported by Ichnion:
 | Device Location | yes |
 | Primary Location | yes |
 | Primary Public Location | yes |
-| Last location | ? |
+| Last location | yes |
+| Location History | yes |
 
 :::tip
 
