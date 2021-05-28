@@ -28,14 +28,15 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: 'docs/about', label: 'About', position: 'right'},
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'right',
+          to: 'docs/about', label: 'About', position: 'right',
         },
-        {to: 'contact', label: 'Contact', position: 'right'},
+        {
+          to: 'docs/quickstart', label: 'Docs', position: 'right',
+        },
+        {
+          to: 'contact', label: 'Contact', position: 'right',
+        },
       ],
     },
     footer: {
