@@ -8,7 +8,7 @@ possible.
 
 ## Code of Conduct
 The Ichnion Project has adopted a Code of Conduct that we expect project
-participants to adhere to. Please [read the full text](https://github.com/ichnion/.github/blob/master/CODE_OF_CONDUCT.md)
+participants to adhere to. Please [read the full text](https://github.com/ichnion/.github/blob/main/CODE_OF_CONDUCT.md)
 so that you can understand what actions will and will not be tolerated.
 
 ## Our Development Process
