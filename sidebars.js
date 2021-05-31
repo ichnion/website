@@ -1,7 +1,7 @@
 module.exports = {
   docs: {
     'Ichnion': [
-      'about', 'quickstart', 'join',
+      'quickstart', 'community', 'contact',
     ],
     'User Guide': [
       'user/index', 'user/install',
