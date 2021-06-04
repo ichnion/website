@@ -47,7 +47,7 @@ Depending on the file you want to extract, you may act differently :
 
 **EXAMPLE :** When we made this tutorial, there was no Snapchat data added to Excavator yet. So we need first to create a folder **snapchat** and then create a file **snapchat_areas_visited_history.rs** in this folder. (We don't call it snapchat_location_history as we want to collect a particular data untitled areas_visited into our snapchat_location_history file)
 
-![img](../../static/img_tutorial/Screenshot1.png)
+![img](img_tutorial/Screenshot1.png)
 
 ### Step 3 : Check data source (2)
 Depending on the file you want to extract, you may act differently : 
@@ -73,7 +73,7 @@ pub mod snapchat_areas_visited_history;
 
 pub use snapchat_areas_visited_history::*;
 ```
-![img](../../static/img_tutorial/Screenshot2.png)
+![img](img_tutorial/Screenshot2.png)
 
 ### Step 4 : Check data source(3)
 Only if you extract a file from a non-supported source : go into **src/activities.rs** and write the following code : 
@@ -91,7 +91,7 @@ pub use snapchat::*;
 You need to open and have a look on your .json file's structure, to identify what info you want to extract. 
 
 **EXAMPLE :** 
-![img](../../static/img_tutorial/Screenshot3.png)
+![img](img_tutorial/Screenshot3.png)
 
 Here is a good example of data : it is pretty hard to read it without using Excavator, and impossible to analyze. (We have reduced the number of lines for this tutorial but your file may be much longer)
 For our example, we are going to extract **"Areas_you_may_have_visited_in_the_last_two_years"**. We have to look at the fields we need to extract : for us, it will be **Time**, **City** and **Region**. We will not extract Postal Code for technical reasons explained later. Each file will have different fields, so you will need to adapt your code to your file. 
@@ -201,11 +201,11 @@ impl ... {
 ```
 Then, you need to go back to the structure of your .json file. Please look carefully at our example : 
 
-![img](../../static/img_tutorial/Screenshot4.png)
+![img](img_tutorial/Screenshot4.png)
 
 On the picture, you can see three different arrows. They define the different objects we are going to use in our code. Let's try to make it easier to understand, using boxes. 
 
-![img](../../static/img_tutorial/Screenshot5.png)
+![img](img_tutorial/Screenshot5.png)
 
 - The first one (the green) underlines the general structure of our file : **"{}"**. You can see it like a big boxe, where different categories are in : **Frequent Location**, **Latest Location**, **Home & Work**... and finally the one we want to extract in this tutorial : **Areas_you_may_have_visited_in_the_last_two_years**. 
 - The second one (the red) underlines the structure of the data we want : **[]**. If wanted, we could extract all of them, but in our example, we are only interested in the **Areas_you_may_have_visited_in_the_last_two_years**. 
@@ -438,7 +438,7 @@ else if f_name.starts_with("snap_location_history.json") {
 
 Finished ! (Actually, almost...)
 Open a terminal and type **cargo test**. If you have made no mistake since the beginning of this tutorial, you should see the following screen : 
-![img](../../static/img_tutorial/SuccessfulTest.png)
+![img](img_tutorial/SuccessfulTest.png)
 Then you can finally extract your data, using your own work. Type in the terminal **cargo run read path_of_your_file**. 
 
 If you have some error's messages, the compiler will help you to solve your problem. However, if you need help, you can refer to the [common error's page](errors) or [contact us on Discord](https://discord.gg/HPFF83fTR4). 
