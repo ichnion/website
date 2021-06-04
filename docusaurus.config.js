@@ -29,13 +29,14 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/about', label: 'About', position: 'right',
+          label: 'Documentation',
+          to: 'docs/quickstart',
+          position: 'right',
         },
         {
-          to: 'docs/quickstart', label: 'Docs', position: 'right',
-        },
-        {
-          to: 'contact', label: 'Contact', position: 'right',
+          label: 'Contact',
+          to: 'docs/contact',
+          position: 'right',
         },
       ],
     },
@@ -46,8 +47,8 @@ module.exports = {
           title: 'Learn',
           items: [
             {
-              label: 'Introduction',
-              to: 'docs/about',
+              label: 'Quickstart',
+              to: 'docs/quickstart',
             },
             {
               label: 'User Guide',
@@ -64,7 +65,7 @@ module.exports = {
           items: [
             {
               label: 'Join us',
-              to: 'docs/join',
+              to: 'docs/contact',
             },
             {
               label: 'Discord',
@@ -81,11 +82,11 @@ module.exports = {
           items: [
             {
               label: 'Supporter',
-              to: 'support',
+              to: 'docs/community',
             },
             {
               label: 'Get in touch',
-              to: 'contact',
+              to: 'docs/contact',
             },
           ],
         },

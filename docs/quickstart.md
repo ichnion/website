@@ -1,67 +1,48 @@
 ---
-title: Quickstart
-
+title: Get started
 ---
 
-# Quickstart
-Excavator extracts and stores data from your personal data exports.
+# Get started
 
-## Installing Excavator
-### Compiling from source
-You need to have a [package manager](https://doc.rust-lang.org/cargo/appendix/glossary.html#package-manager) called [cargo](https://doc.rust-lang.org/cargo/) in your local.
+Ichnion is about your personal data and aims to make it easy for everyone to obtain, inspect, analyze and control their personal data.
 
-If you already have got `rustc` installed in your local, you also have `cargo` installed locally.
+### Digital privacy
 
-And then you can install with this command.
+With Ichnion everyone can gain insight in the data that is stored about us, fostering transparency in a digital society.
 
-```sh
-$ cargo install --git https://github.com/ichnion/excavator --branch develop
-```
+To help you get a hold of your personal data, we developed a tool called Excavator. Excavator extracts, stores and visualizes your personal data exports.
 
-### Install from crates.io
-You can also install from package registry.
+### Installing Excavator
+
+The easiest way to install Excavator is using a package registry like crates.io:
 
 ```sh
 $ cargo install excavator
 ```
 
-### Install from Homebrew
+In case you are using MacOS you can also install the package from Homebrew:
+
 ```sh
 $ brew tap ichnion/tap
 $ brew install excavator
 ```
 
-## How to use Excavator
-### Prerequisite
-Currently, we support *part of* `Google Takeout` and `Facebook` data.
+### How to use Excavator
 
-You need to prepare the applicable data from [Google Takeout](https://takeout.google.com/settings/takeout) or [Facebook](https://www.facebook.com/help/972879969525875).
+You need to request and download your personal data first. If you want to know how, read the [Get your data](user/index.md) section in this manual.
 
-Supported files are below.
+Assuming that you already have your personal data archive available on your computer, running Exxcavator is as easy as
 
-- Google Takout
-  - `MyActivity.json`
-  - `search-history.json`
-  - `watch-history.json`
-  - `Location History.json`
-  - `Saved Place.json`
-  - `Semantic Location History.json`
-  - `All the .json files from Google Fit "All Sessions".`
+```sh
+$ excavator read TakeOut
+```
 
-- Facebook
-  - `device_location.json`
-  - `primary_location.json`
-  - `primary_public_location.json`
-  - `last_location.json`
-  - `location_history.json`
+This will recusively find the applicable files from your `TakeOut` directory and extract the data.
 
-### Basic usage
-Below is the basic example to use excavator. Which will recusively find the applicable file from *directory* and extract the data.
+Alternatively you can specify a single file like:
 
-`$ excavator read TakeOut`
+```sh
+$ excavator read MyActivity.json
+```
 
-Or you can specify the single file
-
-`$ excavator read Location History.json`
-
-Then it will store the data into database.
+The extracted data will be stored into a SQLite database in the current directory.
