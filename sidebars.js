@@ -18,7 +18,7 @@ module.exports = {
       },
     ],
     'Developers': [
-      'developer/index', 'developer/contribute', 'developer/markdown',
+      'developer/index', 'developer/contribute', 'developer/markdown', 'developer/tutorial', 'developer/errors'
     ],
   },
 };
