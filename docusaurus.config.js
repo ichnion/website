@@ -82,7 +82,7 @@ module.exports = {
           items: [
             {
               label: 'Supporter',
-              to: 'docs/community',
+              to: 'docs/community/index',
             },
             {
               label: 'Get in touch',

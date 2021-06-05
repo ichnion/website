@@ -463,6 +463,6 @@ Open a terminal and type `cargo test`. If you have made no mistake since the beg
 
 Then you can finally extract your data, using your own work. Type in the terminal `cargo run read path_of_your_file`.
 
-If you have some error's messages, the compiler will help you to solve your problem. However, if you need help, you can refer to the [common error's page](errors) or [contact us on Discord](https://discord.gg/HPFF83fTR4).
+If you have some error's messages, the compiler will help you to solve your problem. However, if you need help, you can refer to the [common error's page](../errors/index.md) or [contact us on Discord](https://discord.gg/HPFF83fTR4).
 
 Finally, you can write in the terminal `cargo fmt --all` and then make a [pull request](https://github.com/ichnion/excavator). We will review your code, and if there is no problem, add it to the Excavator's project. Well done!

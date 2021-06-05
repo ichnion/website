@@ -13,7 +13,7 @@ Finally, if you still have errors, you can [contact us on Discord](https://disco
 
 ![img](./sqlite.png)
 
-An Sqlite error means that there is an issue with your database. It usually comes from a wrong syntax in your database when you create it. You should look at `src/db/schema.rs` if the database is correctly defined : be careful with each word written, each symbol like `,` or `()`. Your syntax must be identical as ours in the [tutorial](tutorial).
+An Sqlite error means that there is an issue with your database. It usually comes from a wrong syntax in your database when you create it. You should look at `src/db/schema.rs` if the database is correctly defined : be careful with each word written, each symbol like `,` or `()`. Your syntax must be identical as ours in the [tutorial](../tutorial/index.md).
 
 Another Sqlite error could come from your Primary Key. If you use one of the field of your file as a primary key, verify that each value of this field is different.
 

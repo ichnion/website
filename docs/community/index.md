@@ -28,4 +28,4 @@ Ichnion is a project led by [Georepublic](https://georepublic.info/), [Tokyo Uni
 
 We are looking for people from all over the world to join and collaborate on this project.
 
-[Contact us](contact) if you are an individual, company or organization that wants to support the project.
+[Contact us](../contact) if you are an individual, company or organization that wants to support the project.
