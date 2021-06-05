@@ -67,7 +67,7 @@ pub mod snapchat_areas_visited_history;
 pub use snapchat_areas_visited_history::*;
 ```
 
-![img](./tutorial_2.png)
+![img](./tutorial_3.png)
 :::
 
 ### Step 4: Check data source(3)
@@ -94,7 +94,7 @@ You need to open and have a look on your .json file's structure, to identify wha
 
 **EXAMPLE:**
 
-![img](./tutorial_3.png)
+![img](./tutorial_2.png)
 
 Here is a good example of data : it is pretty hard to read it without using Excavator, and impossible to analyze. (We have reduced the number of lines for this tutorial but your file may be much longer)
 
