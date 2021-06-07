@@ -90,20 +90,7 @@ module.exports = {
             },
           ],
         },
-        {
-          title: 'Legal',
-          items: [
-            {
-              label: 'Privacy',
-              to: 'legal/privacy',
-            },
-            {
-              label: 'Terms',
-              to: 'legal/terms',
-            },
-          ],
-        },
-      ],
+       ],
       copyright: `Copyright © ${new Date().getFullYear()} Code for Myself. Built with Docusaurus.`,
     },
   },
