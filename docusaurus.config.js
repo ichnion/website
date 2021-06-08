@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Ichnion',
   tagline: 'Visualize your digital footprint',
-  url: 'https://ichnion.github.io',
-  baseUrl: '/website/',
+  url: 'https://ichnion.code4myself.org/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'ichnion', // Usually your Github org/user name.
