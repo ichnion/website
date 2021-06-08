@@ -98,7 +98,7 @@ You need to open and have a look on your .json file's structure, to identify wha
 
 Here is a good example of data : it is pretty hard to read it without using Excavator, and impossible to analyze. (We have reduced the number of lines for this tutorial but your file may be much longer)
 
-For our example, we are going to extract *"Areas_you_may_have_visited_in_the_last_two_years"*. We have to look at the fields we need to extract : for us, it will be `Time`, `City` and `Region`. We will not extract Postal Code for technical reasons explained later. Each file will have different fields, so you will need to adapt your code to your file.
+For our example, we are going to extract *"Areas_you_may_have_visited_in_the_last_two_years"*. We have to look at the fields we need to extract : for us, it will be `Time`, `City`, `Region` and `Postal Code`. Each file will have different fields, so you will need to adapt your code to your file.
 
 
 Go to `src/db/schema.rs` and add the following code into the function `create_tables` :
@@ -118,7 +118,7 @@ In the `()` after the line `CREATE TABLE...` you will need to add your own field
 
 **Example:**
 
-We decided to add `Time`, `City` and `Region` to our database. The following code is what we need for our example :
+We decided to add `Time`, `City`, `Region` and `Postal Code`to our database. The following code is what we need for our example :
 
 ```rust
 // snapchat_location_history
@@ -127,7 +127,8 @@ conn.execute(
     uuid              TEXT NOT NULL PRIMARY KEY,
     Time              TEXT,
     City              TEXT,
-    Region            TEXT
+    Region            TEXT,
+    Postal_Code       TEXT
   )",
   NO_PARAMS,
 )
@@ -141,6 +142,10 @@ You have to select one field as a primary key. To be considered as a primary key
 
 :::note
 We only put `TEXT` in our database. It is the easiest way to proceed, as we have a `to_string()` method in Rust. You will see next an example of this method.
+:::
+
+:::note
+Fields' name have to be composed of only one word. That is the reason why we wrote `Postal_Code` instead of `Postal Code`. 
 :::
 
 ### Step 6: Create the function
@@ -195,8 +200,10 @@ impl ... {
           Time,
           City,
           Region,
+          Postal_Code
+          
         )
-        VALUES (?1, ?2, ?3, ?4)",
+        VALUES (?1, ?2, ?3, ?4, ?5)",
         params![
           ...
         ],
@@ -239,11 +246,13 @@ pub struct GeneralStructure {
 pub struct SmallerStructure {
   pub Time: String,
   pub City: String,
-  pub Region: String
+  pub Region: String,
+  #[serde(rename = "Postal Code")]
+  pub Postal: String
 }
 ```
 
-We have a structure `GeneralStructure` (the green boxe) containing a `Vec` (red boxes) of `SmallerStructure` (blue boxes). This `SmallerStructure` itself contains the fields we want (`Time`, `City` and `Region`). Here we have the explanation of why we don't extract `Postal Code`. When you make your code, the fields of structure have to be written in the same way as in the file you are working on. For example, we have written `"Areas_you_may_have_visited_in_the_last_two_years"` just like in our .json file, even if it is a very long name for a field. Unfortunately, fields' names can not be composed of two different words, and that is the reason why we don't manage `Postal Code` here.
+We have a structure `GeneralStructure` (the green boxe) containing a `Vec` (red boxes) of `SmallerStructure` (blue boxes). This `SmallerStructure` itself contains the fields we want (`Time`, `City`, `Region` and `Postal Code`). When you make your code, the fields of structure have to be written in the same way as in the file you are working on. For example, we have written `"Areas_you_may_have_visited_in_the_last_two_years"` just like in our .json file, even if it is a very long name for a field. However, there is a method to manage long names or names composed of two words. Indeed, we should not be able to work with `Postal Code` as its name contains two words, but we can use the following method : `#[serde(rename = "Postal Code")]`. It allows us to give a different name to the field of our structure. We could have done this with the field of our `GeneralStructure`to make it shorter. 
 
 Apply what we did by creating the number of structures you need for your own file, using the code written juste before, and name the fields of structures the same they are untitled in your file.
 
@@ -261,18 +270,14 @@ impl GeneralStructure {
       let my_uuid = Uuid::new_v4();
       conn.execute(
         "INSERT INTO snapchat_areas_visited_history (
-            uuid,
-            Time,
-            City,
-            Region
-          )
-          VALUES (?1, ?2, ?3, ?4)",
-          params![
-            &my_uuid.to_string(),
-            &elem.Time,
-            &elem.City,
-            &elem.Region,
-          ],
+                        uuid,
+                        Time,
+                        City,
+                        Region,
+                        Postal_Code
+                    )
+                    VALUES (?1, ?2, ?3, ?4, ?5)",
+                params![&my_uuid.to_string(), &elem.Time, &elem.City, &elem.Region, &elem.Postal],
         )
         .map_err(|err| println!("{:?}", err))
         .ok();
@@ -312,6 +317,7 @@ fn test_snapchat_areas_visited_history() -> Result<(), Box<dyn std::error::Error
     Time: "2021/02/12 11:51:31 UTC".to_string(),
     City: "Paris".to_string(),
     Region: "Ile - De - France".to_string(),
+    Postal: "75000".to_string(),
   };
   let GeneralTest = GeneralStructure {
     Areas_you_may_have_visited_in_the_last_two_years: vec![SmallerTest],
@@ -349,7 +355,9 @@ pub struct GeneralStructure {
 pub struct SmallerStructure {
   pub Time: String,
   pub City: String,
-  pub Region: String
+  pub Region: String,
+  #[serde(rename = "Postal Code")]
+  pub Postal: String
 }
 
 #[allow(non_snake_case)]
@@ -359,18 +367,14 @@ impl GeneralStructure {
       let my_uuid = Uuid::new_v4();
       conn.execute(
         "INSERT INTO snapchat_areas_visited_history (
-            uuid,
-            Time,
-            City,
-            Region
-          )
-          VALUES (?1, ?2, ?3, ?4)",
-          params![
-            &my_uuid.to_string(),
-            &elem.Time,
-            &elem.City,
-            &elem.Region,
-          ],
+                        uuid,
+                        Time,
+                        City,
+                        Region,
+                        Postal_Code
+                    )
+                    VALUES (?1, ?2, ?3, ?4, ?5)",
+                params![&my_uuid.to_string(), &elem.Time, &elem.City, &elem.Region, &elem.Postal],
         )
         .map_err(|err| println!("{:?}", err))
         .ok();
@@ -390,6 +394,7 @@ fn test_snapchat_areas_visited_history() -> Result<(), Box<dyn std::error::Error
     Time: "2021/02/12 11:51:31 UTC".to_string(),
     City: "Paris".to_string(),
     Region: "Ile - De - France".to_string(),
+    Postal: "75000".to_string(),
   };
   let GeneralTest = GeneralStructure {
     Areas_you_may_have_visited_in_the_last_two_years: vec![SmallerTest],
