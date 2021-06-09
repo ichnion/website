@@ -24,7 +24,7 @@ Another Sqlite error could come from your Primary Key. If you use one of the fie
 If you error's message returns "*missing field ...*", it means that you must have written a wrong name for a field of one of your structure. In our example, we have written "*oui*" instead of *Areas_you_may_have_visited_in_the_last_two_years* into our `GeneralStructure`, but there is not such field named "*oui*" in our `.json` file. This is the reason why we have this error.
 
 :::caution
-Remember that each field of your structures must have the same name as a field in your .json file. Please also remember that you can't extract a field if its names is made of more than 1 word (like Postal Code in our tutorial's example).
+Remember that each field of your structures must have the same name as a field in your .json file.
 :::
 
 ## Use of undeclared crate or module
