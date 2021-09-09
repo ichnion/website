@@ -2,6 +2,49 @@
 title: Installation
 ---
 
+:::important
+
+There are different methods to install Excavator, and it depends on your profile to select how you are going to install it. If you are not a developer, please refer to the "Non-Developer Guide". Otherwise, please follow the instructions from the "Developer guide".  
+
+:::
+
+## Non-Developer Guide 
+
+Go to [our GitHub page](https://github.com/ichnion/excavator/releases). 
+
+![img](../../static/img/img-2-install.png)
+
+As you can see on the screenshot, there are different files in the "Assets" part of the current release (v0.2.0 when we are writing this).
+The three files with the `.tar.gz` extension are the ones we are looking for. The next step will depend on which OS you are using.
+
+#### Windows 
+
+Click on `excavator-windows.tar.gz`. Once it is downloaded, you need to unzip the file. For this tutorial, we are using 7Zip. 
+
+![img](../../static/img/img-3-install.png)
+
+Put this file in `C:\Windows\System32`, and the installation is completed. You should now be able to use Excavator in a terminal.
+
+#### Linux 
+
+Click on `excavator-linux.tar.gz`. Once it is downloaded, extract it wherever you want. In our case, we extract it in `Desktop`. 
+
+![img](../../static/img/img-5-install.png)
+
+Finally, open a terminal and type the following command `sudo cp PATH_TO_EXCAVATOR /usr/local/bin` (replace `PATH_TO_EXCAVATOR` by the path to where you extracted excavator in the previous step).
+
+The installation is completed, you should now be able to use Excavator in a terminal.
+
+#### MacOS 
+
+Click on `excavator-linux.tar.gz`. Once it is downloaded, extract it in `usr/local/bin`.  
+
+The installation is completed, you should now be able to use Excavator in a terminal.
+
+---
+
+## Developer Guide
+
 The easiest way to install Excavator is using a package registry like crates.io:
 
 ```sh
