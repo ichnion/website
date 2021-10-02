@@ -14,7 +14,7 @@ Finally, download the lastest version of the Sieving's code on [our Github page]
 ---
 
 Open `src/main.rs`. At the bottom of the code, you should see this: 
-![img](img/sieving1.png)
+![img](img/sieving1.PNG)
 
 Create your own function below the other ones: line 105 on the picture. For example, if you want to add `Japanese driving license's number` to the list of data to hide:
 ```sh
@@ -35,7 +35,7 @@ Then you have to write a test to your function. Put the following code next to t
 Obviously, you will have to change the value in the `assert!(re.is_match(""))` method depending on what data are you adding to the scanner.
 
 Once you have done this, you only need to go at te beginning of the code:
-![img](img/sieving2.png)
+![img](img/sieving2.PNG)
 
 `line 35`: add the name of the function you just created in the vector.
 `line 36`: add the name of the data you just added to the scanner in the vector.
