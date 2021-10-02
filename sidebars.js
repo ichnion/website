@@ -20,5 +20,8 @@ module.exports = {
     'Developers': [
       'developer/index', 'developer/tutorial/index', 'developer/errors/index', 'developer/contribute', 'developer/markdown'
     ],
+	'Sieving': [
+      'sieving/index', 'sieving/users', 'sieving/developers',
+    ],
   },
 };
