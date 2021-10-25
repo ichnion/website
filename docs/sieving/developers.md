@@ -38,6 +38,7 @@ Once you have done this, you only need to go at te beginning of the `main.rs` co
 ![img](img/sieving2.PNG)
 
 `line 35`: add the name of the function you just created in the vector, following this syntax: `regex_functions::name_of_your_function`.
+
 `line 37`: add the name of the data you just added to the scanner in the vector.
 
 With our example of `Japanese driving license number`:
