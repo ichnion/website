@@ -13,10 +13,10 @@ Finally, download the lastest version of the Sieving's code on [our Github page]
 
 ---
 
-Open `src/main.rs`. At the bottom of the code, you should see this: 
+Open `src/regex_functions.rs`. You should see this: 
 ![img](img/sieving1.PNG)
 
-Create your own function below the other ones: line 105 on the picture. For example, if you want to add `Japanese driving license's number` to the list of data to hide:
+Create your own function below the other ones: line 27 on the picture. For example, if you want to add `Japanese driving license's number` to the list of data to hide:
 ```sh
 fn create_japanese_driving_license_number() -> regex::Regex {
     return Regex::new(r"YOUR_REGEX").unwrap();
@@ -24,7 +24,7 @@ fn create_japanese_driving_license_number() -> regex::Regex {
 ```
 Please respect the syntax we use.
 
-Then you have to write a test to your function. Put the following code next to the other tests (between line 124 and 125 on the picture):
+Then you have to write a test to your function. Put the following code next to the other tests (at the bottom of the code, before the last token):
 ```sh
 #[test]
     fn japanese_driving_license_number_check() {
@@ -34,16 +34,19 @@ Then you have to write a test to your function. Put the following code next to t
 ```
 Obviously, you will have to change the value in the `assert!(re.is_match(""))` method depending on what data are you adding to the scanner.
 
-Once you have done this, you only need to go at te beginning of the code:
+Once you have done this, you only need to go at te beginning of the `main.rs` code:
 ![img](img/sieving2.PNG)
 
-`line 35`: add the name of the function you just created in the vector.
-`line 36`: add the name of the data you just added to the scanner in the vector.
+`line 36`: add the name of the function you just created at the end of the vector: `regex_functions::name_of_your_function`.
+
+`line 37`: add the name of the data you just added to the scanner at the end of the vector.
 
 With our example of `Japanese driving license number`:
 ```sh
-    let regex_list=vec![create_iban(),create_email_address(),create_ip_address(),create_japanese_driving_license_number()];
-    let regex_list_names=vec!["IBAN","EMAIL ADDRESS","IP ADDRESS","JAPANESE DRIVING LICENSE NUMBER"];
+    let regex_list=vec![regex_functions::create_iban(),regex_functions::create_email_address(),regex_functions::create_ip_address(),
+    regex_functions::create_japanese_phone_number1(),regex_functions::create_japanese_phone_number2(),regex_functions::create_japanese_phone_number3(),
+    regex_functions::create_japanese_driving_license_number()];
+    let regex_list_names=vec!["IBAN","EMAIL ADDRESS","IP ADDRESS","JAPANESE PHONE NUMBER","JAPANESE PHONE NUMBER","JAPANESE PHONE NUMBER", JAPANESE DRIVING LICENSE NUMBER];
 ```
 Finished! You can then make a pull request of your code on [Github](https://github.com/ichnion/sieving).
 

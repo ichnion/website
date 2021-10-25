@@ -13,4 +13,5 @@ It is really easy for developers to contribute to sieving and particularly to ad
 - `Email addresses`
 - `IP addresses`
 - `IBAN`
+- `Japanese Phone Numbers`
 
