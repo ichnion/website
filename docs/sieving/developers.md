@@ -37,9 +37,9 @@ Obviously, you will have to change the value in the `assert!(re.is_match(""))` m
 Once you have done this, you only need to go at te beginning of the `main.rs` code:
 ![img](img/sieving2.PNG)
 
-`line 35`: add the name of the function you just created in the vector, following this syntax: `regex_functions::name_of_your_function`.
+`line 36`: add the name of the function you just created at the end of the vector, following this syntax: `regex_functions::name_of_your_function`.
 
-`line 37`: add the name of the data you just added to the scanner in the vector.
+`line 37`: add the name of the data you just added to the scanner at the end of the vector.
 
 With our example of `Japanese driving license number`:
 ```sh
